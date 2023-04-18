@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="bin/main" path="src/main/scala">
+		<attributes>
+			<attribute name="gradle_scope" value="main"/>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="bin/test" path="src/test/java">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle_scope" value="test"/>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8/"/>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/finagle-http_2.12/20.1.0/36eead1b56d853c03b96c0bd175917de47d82f2/finagle-http_2.12-20.1.0.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/finagle-http_2.12/20.1.0/de0bd830f0cd1403a972a9ae07a6767adf792d47/finagle-http_2.12-20.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/finagle-http2_2.12/20.1.0/9786d6a935c03b3c981eb3592e77470c29bb2867/finagle-http2_2.12-20.1.0.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/finagle-http2_2.12/20.1.0/33ae1d7f54efcc61210ff028b6995c1abcf665c5/finagle-http2_2.12-20.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/finagle-netty4-http_2.12/20.1.0/b5ff7d7d9bc97b2997acdbbdef77807c633077ce/finagle-netty4-http_2.12-20.1.0.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/finagle-netty4-http_2.12/20.1.0/fd1a2bba8471873df8627ae3e5e4ee05c2a3291d/finagle-netty4-http_2.12-20.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/finagle-base-http_2.12/20.1.0/5b834e8db32413411ae9b5f98026db51195eed2c/finagle-base-http_2.12-20.1.0.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/finagle-base-http_2.12/20.1.0/c06dfa0990e8943d0ea737c36b1a9ae4440b7f01/finagle-base-http_2.12-20.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/finagle-netty4_2.12/20.1.0/4b53c27cf92f6984f970c33c95122110754eedbe/finagle-netty4_2.12-20.1.0.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/finagle-netty4_2.12/20.1.0/e8eb16dd3d655ccfc3637532f93805840ad2d6f2/finagle-netty4_2.12-20.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/finagle-core_2.12/20.1.0/2b7524f1c46096c182757387ee893fb814a09832/finagle-core_2.12-20.1.0.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/finagle-core_2.12/20.1.0/4b75add76cf62499acfdda190879c2d55ec9f139/finagle-core_2.12-20.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/finagle-toggle_2.12/20.1.0/ee41a732f9a8d3d5164d7c6ece277f1dd177c42a/finagle-toggle_2.12-20.1.0.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/finagle-toggle_2.12/20.1.0/d5d02386a9b85f438f0008ef08772a41413b2e11/finagle-toggle_2.12-20.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-codec_2.12/20.1.0/a218d16c180c2a9120feef321fd444ecbb5232f0/util-codec_2.12-20.1.0.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-codec_2.12/20.1.0/8b11c9e9a18fd952eba9f5e88ac50340a218a3eb/util-codec_2.12-20.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-security_2.12/20.1.0/e7ffede53f5214d2565b59549604f6ee207538c8/util-security_2.12-20.1.0.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-security_2.12/20.1.0/1c76fa993e68df70dc1ab39aba51eee5106494a/util-security_2.12-20.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-logging_2.12/20.1.0/a4557986077ef87e5b2d3ab8b9f7fa06ffeb01b3/util-logging_2.12-20.1.0.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-logging_2.12/20.1.0/f9c83a6fa1e95f4ee47abee45e805479bc0b9cb3/util-logging_2.12-20.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-jvm_2.12/20.1.0/547d4c0a2361982e9f29f2d6ecabe90213e230f8/util-jvm_2.12-20.1.0.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-jvm_2.12/20.1.0/7d4707975ed058869d359e5cb6bd852c9c7735a1/util-jvm_2.12-20.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-tunable_2.12/20.1.0/1a3d00bbb148fa34df268c5a3a4b8218689d664e/util-tunable_2.12-20.1.0.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-tunable_2.12/20.1.0/9344a28431111e913cb01b2cc4d5613b0edc815e/util-tunable_2.12-20.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-app_2.12/20.1.0/81a6b6a598075e6044a0eddda3c17d855d0cfadc/util-app_2.12-20.1.0.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-app_2.12/20.1.0/57cea4df5e17e0494af96bc7a3068139357fd03b/util-app_2.12-20.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-stats_2.12/20.1.0/4bb89badf72577b14fcefa63fa36d0e9c2fff7c8/util-stats_2.12-20.1.0.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-stats_2.12/20.1.0/14ec65291f8b37c627333de380808f7ba33a0430/util-stats_2.12-20.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-cache_2.12/20.1.0/cff911511c976ada78d84598b7ea6853f14b04c4/util-cache_2.12-20.1.0.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-cache_2.12/20.1.0/cfd6bb837e9f5f01632708efc344ded552a885d7/util-cache_2.12-20.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-lint_2.12/20.1.0/567de2f3abc322a61024ffa89a0117015772bc28/util-lint_2.12-20.1.0.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-lint_2.12/20.1.0/4e29d22a356929ef4428478fe75d3de83a60d326/util-lint_2.12-20.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-registry_2.12/20.1.0/de73173b5d31f2c021d90a0adabb35abf1c3fc2d/util-registry_2.12-20.1.0.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-registry_2.12/20.1.0/c001c24d2428044821aea43fd0b5723a43962754/util-registry_2.12-20.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-core_2.12/20.1.0/8f33740ee9be521d4a3aa484f10c872214ed4a5/util-core_2.12-20.1.0.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-core_2.12/20.1.0/a07a5b30927e88ec0565844fe0ad4efcec849c71/util-core_2.12-20.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/finagle-init_2.12/20.1.0/3e4fc3a3f762074a40a68698161e9f7112f005cb/finagle-init_2.12-20.1.0.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/finagle-init_2.12/20.1.0/2847dad7cc97cba735bf378f88b322ff7aa2f956/finagle-init_2.12-20.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-hashing_2.12/20.1.0/c24399bf54e2568e28402045f8e46cd486ff25dc/util-hashing_2.12-20.1.0.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-hashing_2.12/20.1.0/3f4c78896615b7ee9f75f143da696164a92139c5/util-hashing_2.12-20.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-function_2.12/20.1.0/2a7da1a42b0270ffb791a44aaf088c85e30feb30/util-function_2.12-20.1.0.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.twitter/util-function_2.12/20.1.0/29a1c8fff50eef14557ba784648c25ba7da4ba80/util-function_2.12-20.1.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/org/scala-lang/modules/scala-collection-compat_2.12/2.1.2/scala-collection-compat_2.12-2.1.2.jar" sourcepath="/Users/dhilpipre/.m2/repository/org/scala-lang/modules/scala-collection-compat_2.12/2.1.2/scala-collection-compat_2.12-2.1.2-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-scala_2.12/2.9.10/8225bd4809d742b5d3c7b41d65a34913c425b223/jackson-module-scala_2.12-2.9.10.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-scala_2.12/2.9.10/f9962d7ca5d62886df0b1bec46e0464ea35b03/jackson-module-scala_2.12-2.9.10-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-reflect/2.12.8/682d33402cdae50258afa2c0860eb54688dab610/scala-reflect-2.12.8.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/org.scala-lang/scala-reflect/2.12.8/2b4a5bbdc19f8ab34d474f30dbca957addc8ae09/scala-reflect-2.12.8-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.jar" sourcepath="/Users/dhilpipre/.m2/repository/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/org/scala-lang/scala-library/2.12.10/scala-library-2.12.10.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.newrelic.agent.java/newrelic-agent/6.4.0/716c0521d4baa12d9f2b0a005e1ee06a9c180214/newrelic-agent-6.4.0.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.newrelic.agent.java/newrelic-agent/6.4.0/e640c171a471a3cf07a6ab7c248640ffc9e10953/newrelic-agent-6.4.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/com/newrelic/agent/java/newrelic-api/6.4.0/newrelic-api-6.4.0.jar" sourcepath="/Users/dhilpipre/.m2/repository/com/newrelic/agent/java/newrelic-api/6.4.0/newrelic-api-6.4.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.26.Final/netty-tcnative-boringssl-static-2.0.26.Final.jar" sourcepath="/Users/dhilpipre/.m2/repository/io/netty/netty-tcnative-boringssl-static/2.0.26.Final/netty-tcnative-boringssl-static-2.0.26.Final-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/io/netty/netty-handler-proxy/4.1.43.Final/netty-handler-proxy-4.1.43.Final.jar" sourcepath="/Users/dhilpipre/.m2/repository/io/netty/netty-handler-proxy/4.1.43.Final/netty-handler-proxy-4.1.43.Final-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/io/netty/netty-codec-http2/4.1.43.Final/netty-codec-http2-4.1.43.Final.jar" sourcepath="/Users/dhilpipre/.m2/repository/io/netty/netty-codec-http2/4.1.43.Final/netty-codec-http2-4.1.43.Final-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/io/netty/netty-codec-http/4.1.43.Final/netty-codec-http-4.1.43.Final.jar" sourcepath="/Users/dhilpipre/.m2/repository/io/netty/netty-codec-http/4.1.43.Final/netty-codec-http-4.1.43.Final-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/io/netty/netty-handler/4.1.43.Final/netty-handler-4.1.43.Final.jar" sourcepath="/Users/dhilpipre/.m2/repository/io/netty/netty-handler/4.1.43.Final/netty-handler-4.1.43.Final-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.1.43.Final/ab3836b204a1526bd8fc51efcf34d5ee77b58e28/netty-transport-native-epoll-4.1.43.Final-linux-x86_64.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/io.netty/netty-transport-native-epoll/4.1.43.Final/65b1ff107f900fe50a96926abdee03ea84295c4c/netty-transport-native-epoll-4.1.43.Final-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.43.Final/netty-transport-native-unix-common-4.1.43.Final.jar" sourcepath="/Users/dhilpipre/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.43.Final/netty-transport-native-unix-common-4.1.43.Final-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/io/netty/netty-codec-socks/4.1.43.Final/netty-codec-socks-4.1.43.Final.jar" sourcepath="/Users/dhilpipre/.m2/repository/io/netty/netty-codec-socks/4.1.43.Final/netty-codec-socks-4.1.43.Final-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/io/netty/netty-codec/4.1.43.Final/netty-codec-4.1.43.Final.jar" sourcepath="/Users/dhilpipre/.m2/repository/io/netty/netty-codec/4.1.43.Final/netty-codec-4.1.43.Final-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/io/netty/netty-transport/4.1.43.Final/netty-transport-4.1.43.Final.jar" sourcepath="/Users/dhilpipre/.m2/repository/io/netty/netty-transport/4.1.43.Final/netty-transport-4.1.43.Final-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-paranamer/2.9.10/2e0de8d6da546e028aeb1e04324f707389604d21/jackson-module-paranamer-2.9.10.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.module/jackson-module-paranamer/2.9.10/b5dfea78e8efc56452acbfbb6a3b03b110db6678/jackson-module-paranamer-2.9.10-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.9.10.1/cadb5d93d16151946468cd1a2e96f41bc7d4e198/jackson-databind-2.9.10.1.jar" sourcepath="/Users/dhilpipre/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.9.10.1/6139030dd821bf0df987540792eed84e2b07f1bd/jackson-databind-2.9.10.1-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.10/jackson-core-2.9.10.jar" sourcepath="/Users/dhilpipre/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.10/jackson-core-2.9.10-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/com/github/ben-manes/caffeine/caffeine/2.8.0/caffeine-2.8.0.jar" sourcepath="/Users/dhilpipre/.m2/repository/com/github/ben-manes/caffeine/caffeine/2.8.0/caffeine-2.8.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.11/HdrHistogram-2.1.11.jar" sourcepath="/Users/dhilpipre/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.11/HdrHistogram-2.1.11-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/com/google/code/findbugs/jsr305/2.0.1/jsr305-2.0.1.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/io/netty/netty-buffer/4.1.43.Final/netty-buffer-4.1.43.Final.jar" sourcepath="/Users/dhilpipre/.m2/repository/io/netty/netty-buffer/4.1.43.Final/netty-buffer-4.1.43.Final-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/io/netty/netty-resolver/4.1.43.Final/netty-resolver-4.1.43.Final.jar" sourcepath="/Users/dhilpipre/.m2/repository/io/netty/netty-resolver/4.1.43.Final/netty-resolver-4.1.43.Final-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/io/netty/netty-common/4.1.43.Final/netty-common-4.1.43.Final.jar" sourcepath="/Users/dhilpipre/.m2/repository/io/netty/netty-common/4.1.43.Final/netty-common-4.1.43.Final-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.10/jackson-annotations-2.9.10.jar" sourcepath="/Users/dhilpipre/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.10/jackson-annotations-2.9.10-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/org/checkerframework/checker-qual/2.10.0/checker-qual-2.10.0.jar" sourcepath="/Users/dhilpipre/.m2/repository/org/checkerframework/checker-qual/2.10.0/checker-qual-2.10.0-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/com/google/errorprone/error_prone_annotations/2.3.3/error_prone_annotations-2.3.3.jar" sourcepath="/Users/dhilpipre/.m2/repository/com/google/errorprone/error_prone_annotations/2.3.3/error_prone_annotations-2.3.3-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar" sourcepath="/Users/dhilpipre/.m2/repository/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8-sources.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/.m2/repository/org/nanohttpd/nanohttpd/2.3.1/nanohttpd-2.3.1.jar" sourcepath="/Users/dhilpipre/.m2/repository/org/nanohttpd/nanohttpd/2.3.1/nanohttpd-2.3.1-sources.jar">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="gradle_used_by_scope" value="test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/incubator/newrelic-java-finagle/libs/agent-bridge-datastore.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/incubator/newrelic-java-finagle/libs/agent-bridge.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/incubator/newrelic-java-finagle/libs/newrelic-agent-6.4.0.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/incubator/newrelic-java-finagle/libs/newrelic-weaver-scala-api.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/incubator/newrelic-java-finagle/libs/newrelic-weaver-api.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/incubator/newrelic-java-finagle/libs/newrelic-api.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/dhilpipre/incubator/newrelic-java-finagle/test-lib/instrumentation-test.jar">
+		<attributes>
+			<attribute name="gradle_used_by_scope" value="main,test"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin/default"/>
+</classpath>
