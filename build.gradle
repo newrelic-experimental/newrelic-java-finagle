@@ -30,6 +30,7 @@ project.ext {
 }
 
 apply plugin: 'java'
+apply plugin: 'idea'
 apply plugin: 'de.undercouch.download'
 
 import templates.*
