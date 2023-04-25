@@ -1,18 +1,24 @@
-package com.newrelic.instrumentation.finagle.core;
+package com.newrelic.instrumentation.finagle.thrift;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.logging.Level;
 
 import com.newrelic.agent.bridge.AgentBridge;
 import com.newrelic.api.agent.NewRelic;
 import com.newrelic.api.agent.Trace;
+import com.newrelic.api.agent.TransactionNamePriority;
 import com.twitter.finagle.Service;
 import com.twitter.util.Future;
 
-public class NewRelicServiceWrapper<Req, Rep> extends Service<Req, Rep> {
+public class NewRelicServiceWrapperStarter<Req, Rep> extends Service<Req, Rep> {
 	
 	private Service<Req, Rep> delegate = null;
 	private String name = null;
 	private static boolean isTransformed = false;
+	private Map<String, Object> attributes = null;
 	
-	public NewRelicServiceWrapper(Service<Req, Rep> d) {
+	public NewRelicServiceWrapperStarter(Service<Req, Rep> d) {
 		delegate = d;
 		if(!isTransformed) {
 			AgentBridge.instrumentation.retransformUninstrumentedClass(getClass());
@@ -20,17 +26,28 @@ public class NewRelicServiceWrapper<Req, Rep> extends Service<Req, Rep> {
 		}
 	}
 	
+	public void addAttribute(String key, Object value) {
+		if(attributes == null) attributes = new HashMap<>();
+		attributes.put(key, value);
+	}
+	
+	public boolean isNameSet() {
+		return name != null;
+	}
+	
 	public void setName(String n) {
 		name = n;
 	}
 
 	@Override
-	@Trace
+	@Trace(dispatcher = true)
 	public Future<Rep> apply(Req request) {
 		if(name != null && !name.isEmpty()) {
 			NewRelic.getAgent().getTracedMethod().setMetricName("Custom","Service",name);
+			NewRelic.getAgent().getTransaction().setTransactionName(TransactionNamePriority.FRAMEWORK_HIGH, false, "Finagle-Thrift",name);
 		}
 		NewRelic.getAgent().getTracedMethod().addCustomAttribute("Delegate", delegate.getClass().getName());
+		if(attributes != null) NewRelic.getAgent().getTracedMethod().addCustomAttributes(attributes);
 		return delegate.apply(request);
 	}
 

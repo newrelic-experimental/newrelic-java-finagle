@@ -2,7 +2,7 @@ package com.twitter.finagle.builder;
 
 import com.newrelic.api.agent.weaver.Weave;
 import com.newrelic.api.agent.weaver.Weaver;
-import com.newrelic.instrumentation.finagle.core.NewRelicServiceWrapper;
+import com.newrelic.instrumentation.finagle.core.Utils;
 import com.twitter.finagle.Name;
 import com.twitter.finagle.Service;
 
@@ -18,10 +18,7 @@ public abstract class ClientBuilderClient<Req, Rep> {
 		} else {
 			metricName = label;
 		}
-		Service<Req, Rep> service = Weaver.callOriginal();
-		NewRelicServiceWrapper<Req, Rep> wrapper = new NewRelicServiceWrapper<>(service);
-		wrapper.setName(metricName);
-		return wrapper;
+		return Utils.getServiceWrapper(Weaver.callOriginal(), metricName);
 	}
 	
 	public Service<Req, Rep> newService(String name, String label) {
@@ -31,17 +28,11 @@ public abstract class ClientBuilderClient<Req, Rep> {
 		} else {
 			metricName = label;
 		}
-		Service<Req, Rep> service = Weaver.callOriginal();
-		NewRelicServiceWrapper<Req, Rep> wrapper = new NewRelicServiceWrapper<>(service);
-		wrapper.setName(metricName);
-		return wrapper;
+		return Utils.getServiceWrapper(Weaver.callOriginal(), metricName);
 	}
 
 	public Service<Req, Rep> newService(String name) {
-		Service<Req, Rep> service = Weaver.callOriginal();
-		NewRelicServiceWrapper<Req, Rep> wrapper = new NewRelicServiceWrapper<>(service);
-		wrapper.setName(name);
-		return wrapper;
+		return Utils.getServiceWrapper(Weaver.callOriginal(), name);
 	}
 
 }

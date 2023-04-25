@@ -16,13 +16,13 @@ public class Utils {
 	}
 	
 	public static <Req,Rep> Service<Req,Rep> getServiceWrapper(Service<Req,Rep> service) {
-		if(service instanceof NewRelicServiceWrapper) return service;
+		if(service.getClass().getSimpleName().contains("NewRelicServiceWrapper")) return service;
 		
 		return new NewRelicServiceWrapper<Req,Rep>(service);
 	}
 	
 	public static <Req,Rep> Service<Req,Rep> getServiceWrapper(Service<Req,Rep> service, String name) {
-		if(service instanceof NewRelicServiceWrapper) return service;
+		if(service.getClass().getSimpleName().contains("NewRelicServiceWrapper")) return service;
 		
 		NewRelicServiceWrapper<Req, Rep> wrapper = new NewRelicServiceWrapper<>(service);
 		wrapper.setName(name);
