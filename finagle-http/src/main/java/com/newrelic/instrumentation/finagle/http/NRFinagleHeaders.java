@@ -8,16 +8,22 @@ import java.util.Set;
 import com.newrelic.api.agent.HeaderType;
 import com.newrelic.api.agent.Headers;
 import com.twitter.finagle.http.HeaderMap;
-import com.twitter.finagle.http.Request;
+import com.twitter.finagle.http.Message;
 
 import scala.collection.JavaConverters;
 
+/**
+ * Used insert or extract distributed tracing headers on the Finagle Request or Response (both extend the Message class)
+ * 
+ * @author dhilpipre
+ *
+ */
 public class NRFinagleHeaders implements Headers {
 	
-	private Request request = null;
+	private Message message = null;
 	
-	public NRFinagleHeaders(Request req) {
-		request = req;
+	public NRFinagleHeaders(Message req) {
+		message = req;
 	}
 
 	@Override
@@ -27,7 +33,7 @@ public class NRFinagleHeaders implements Headers {
 
 	@Override
 	public String getHeader(String name) {
-		HeaderMap headers = request.headerMap();
+		HeaderMap headers = message.headerMap();
 		if(headers == null) {
 			return null;
 		}
@@ -46,7 +52,7 @@ public class NRFinagleHeaders implements Headers {
 
 	@Override
 	public void setHeader(String name, String value) {
-		HeaderMap headers = request.headerMap();
+		HeaderMap headers = message.headerMap();
 		if(headers != null) {
 			headers.set(name, value);
 		}
@@ -60,7 +66,7 @@ public class NRFinagleHeaders implements Headers {
 
 	@Override
 	public Collection<String> getHeaderNames() {
-		HeaderMap headers = request.headerMap();
+		HeaderMap headers = message.headerMap();
 		if(headers != null) {
 			scala.collection.Set<String> keys = headers.keySet();
 			Set<String> javaKeySet = JavaConverters.setAsJavaSet(keys);

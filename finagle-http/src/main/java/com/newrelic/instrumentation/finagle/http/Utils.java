@@ -7,6 +7,13 @@ import com.twitter.finagle.http.Request;
 import com.twitter.finagle.http.Response;
 import com.twitter.finagle.http.Status;
 
+/**
+ * Utility class used to populate name value pairs that are then added as
+ * attributes to a Span
+ * 
+ * @author dhilpipre
+ *
+ */
 public class Utils {
 
 	public static void addAttribute(Map<String,Object> attributes, String key, Object value) {

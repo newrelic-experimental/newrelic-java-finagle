@@ -14,6 +14,9 @@ public abstract class HttpMuxer {
 		
 		Option<Route> option = Weaver.callOriginal();
 		
+		/*
+		 * if route is defined then use its pattern to name the transaction
+		 */
 		if(option.isDefined()) {
 			Route r = option.get();
 			if(r != null) {
