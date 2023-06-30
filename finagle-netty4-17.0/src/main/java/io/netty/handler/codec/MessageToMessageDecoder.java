@@ -2,15 +2,14 @@ package io.netty.handler.codec;
 
 import java.util.List;
 
-import com.newrelic.api.agent.NewRelic;
 //import com.newrelic.api.agent.NewRelic;
 import com.newrelic.api.agent.weaver.MatchType;
 import com.newrelic.api.agent.weaver.Weave;
 import com.newrelic.api.agent.weaver.Weaver;
+import com.newrelic.instrumentation.labs.finagle.netty.FinagleNettyUtils;
 
 import io.netty.bootstrap.FinagleNettyDispatcher;
 import io.netty.channel.ChannelHandlerContext_instrumentation;
-import io.netty.handler.codec.http.HttpResponse;
 
 @Weave(type = MatchType.BaseClass)
 public class MessageToMessageDecoder<I> {
@@ -19,8 +18,7 @@ public class MessageToMessageDecoder<I> {
 		Weaver.callOriginal();
 		
 		for(Object obj : list) {
-			if(obj instanceof HttpResponse && ctx.pipeline().finagleLayerToken == null) {
-				ctx.pipeline().finagleLayerToken = NewRelic.getAgent().getTransaction().getToken();
+			if(FinagleNettyUtils.shouldGenerateDispatcher(obj) && ctx.pipeline().finagleLayerToken == null) {
 				if(!FinagleNettyDispatcher.instrumented.get()) {
 					FinagleNettyDispatcher.get();
 				}

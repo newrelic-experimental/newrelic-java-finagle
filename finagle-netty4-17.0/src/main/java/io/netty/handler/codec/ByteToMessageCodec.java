@@ -8,16 +8,24 @@ import com.newrelic.api.agent.weaver.Weaver;
 import com.newrelic.instrumentation.labs.finagle.netty.FinagleNettyUtils;
 
 import io.netty.bootstrap.FinagleNettyDispatcher;
+import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext_instrumentation;
 
 @Weave(type = MatchType.BaseClass)
-public abstract class MessageToMessageCodec<INBOUND_IN, OUTBOUND_IN> {
+public abstract class ByteToMessageCodec<I> {
 
-	
-	protected void decode(ChannelHandlerContext_instrumentation ctx, INBOUND_IN in, List<Object> list) {
+    protected void encode(ChannelHandlerContext_instrumentation ctx, I msg, ByteBuf out) {
+		if(ctx.pipeline().finagleLayerToken != null) {
+			ctx.pipeline().finagleLayerToken.expire();
+			ctx.pipeline().finagleLayerToken = null;
+		}
 		Weaver.callOriginal();
-		
-		for(Object obj : list) {
+    }
+
+    protected void decode(ChannelHandlerContext_instrumentation ctx, ByteBuf in, List<Object> out) {
+    	Weaver.callOriginal();
+    	
+		for(Object obj : out) {
 			if(FinagleNettyUtils.shouldGenerateDispatcher(obj) && ctx.pipeline().finagleLayerToken == null) {
 				if(!FinagleNettyDispatcher.instrumented.get()) {
 					FinagleNettyDispatcher.get();
@@ -25,13 +33,6 @@ public abstract class MessageToMessageCodec<INBOUND_IN, OUTBOUND_IN> {
 				FinagleNettyDispatcher.channelRead(ctx, obj);
 			}
 		}
-	}
-	
-	protected void encode(ChannelHandlerContext_instrumentation ctx, OUTBOUND_IN out, List<Object> list) {
-		if(ctx.pipeline().finagleLayerToken != null) {
-			ctx.pipeline().finagleLayerToken.expire();
-			ctx.pipeline().finagleLayerToken = null;
-		}
-		Weaver.callOriginal();
-	}
+    }
+
 }

@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import com.newrelic.api.agent.NewRelic;
 import com.newrelic.api.agent.Trace;
+import com.newrelic.api.agent.Transaction;
 import com.newrelic.api.agent.TransportType;
 import com.newrelic.api.agent.weaver.Weave;
 import com.newrelic.api.agent.weaver.Weaver;
@@ -18,7 +19,7 @@ import scala.runtime.BoxedUnit;
 @Weave
 public abstract class HttpServerDispatcher {
 	
-	@Trace
+	@Trace(dispatcher = true)
 	public Future<Response> dispatch(Request req) {
 		// add attributes about the request to the span
 		HashMap<String, Object> attributes = new HashMap<>();
@@ -28,6 +29,10 @@ public abstract class HttpServerDispatcher {
 		// process incoming distributed tracing headers if they exist
 		NRFinagleHeaders headers = new NRFinagleHeaders(req);
 		NewRelic.getAgent().getTransaction().acceptDistributedTraceHeaders(TransportType.HTTP, headers);
+		Transaction transaction = NewRelic.getAgent().getTransaction();
+		if(!transaction.isWebTransaction()) {
+			transaction.convertToWebTransaction();
+		}
 		return Weaver.callOriginal();
 	}
 	

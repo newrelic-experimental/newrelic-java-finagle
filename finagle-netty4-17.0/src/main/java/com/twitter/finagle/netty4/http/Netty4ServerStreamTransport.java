@@ -18,7 +18,6 @@ public abstract class Netty4ServerStreamTransport {
 	@Trace(dispatcher = true)
 	public Future<Multi<Request>> read() {
 		NewRelic.getAgent().getTracedMethod().setMetricName("Custom","Finagle","Netty4ServerStreamTransport","readRequest");
-		
 		return Weaver.callOriginal();
 	}
 
