@@ -2,6 +2,8 @@ package com.newrelic.instrumentation.finagle.http;
 
 import java.net.InetAddress;
 import java.net.URI;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 
 import com.newrelic.api.agent.ExternalParameters;
@@ -13,6 +15,16 @@ import com.twitter.finagle.http.Request;
 
 public class FinagleHttpUtils {
 
+	private static List<String> ignores = new ArrayList<>();
+	
+	static {
+		ignores.add("com.twitter.finagle.Service$$anon$1");
+	}
+	
+	public static boolean ignore(String classname) {
+		if(classname.startsWith("com.twitter.finagle")) return true;
+		return ignores.contains(classname);
+	}
 	
 	public static <Req, Rep> boolean isFinch(Service<Req, Rep> service) {
 		Package clazzPackage = service.getClass().getPackage();
