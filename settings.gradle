@@ -1,5 +1,5 @@
 rootProject.name = 'java-instrumentation-template'
-include 'finagle-http'
+include 'finagle-http-17.10'
 include 'finagle-core-18.2.0'
 include 'finagle-thrift'
 include 'finagle-netty4-17.0'

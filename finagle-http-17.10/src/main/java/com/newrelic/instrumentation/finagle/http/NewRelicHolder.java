@@ -1,7 +1,8 @@
-package com.newrelic.instrumentation.finagle.core;
+package com.newrelic.instrumentation.finagle.http;
 
 import java.util.Map;
 
+import com.newrelic.api.agent.ExternalParameters;
 import com.newrelic.api.agent.NewRelic;
 import com.newrelic.api.agent.Segment;
 
@@ -14,14 +15,23 @@ import com.newrelic.api.agent.Segment;
 public class NewRelicHolder {
 
 	private Segment segment = null;
+	private ExternalParameters params;
 	private Map<String, Object> attributes = null;
 	
 	public NewRelicHolder(String segmentName) {
 		segment = NewRelic.getAgent().getTransaction().startSegment(segmentName);
 	}
 	
+	public void addAttributes( Map<String, Object> attrs) {
+		attributes = attrs;
+	}
+	
 	public void endSegment() {
 		if(segment != null) {
+			// report as external if needed
+			if(params != null) {
+				segment.reportAsExternal(params);
+			}
 			if(attributes != null) {
 				segment.addCustomAttributes(attributes);
 			}
@@ -39,9 +49,12 @@ public class NewRelicHolder {
 			segment = null;
 		}
 	}
-
-	public void addAttributes(Map<String, Object> attributes) {
-		this.attributes = attributes;
-	}
 	
+	/*
+	 * report as External
+	 */
+	public void addExternal(ExternalParameters p) {
+		params = p;
+		
+	}
 }

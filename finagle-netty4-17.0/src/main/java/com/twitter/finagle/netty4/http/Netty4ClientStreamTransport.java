@@ -15,13 +15,13 @@ import scala.runtime.BoxedUnit;
 @Weave
 public abstract class Netty4ClientStreamTransport {
 
-	@Trace(dispatcher = true)
+	@Trace
 	public Future<Multi<Response>> read() {
 		NewRelic.getAgent().getTracedMethod().setMetricName("Custom","Finagle","Netty4ClientStreamTransport","readResponse");
 		return Weaver.callOriginal();
 	}
 	
-	@Trace(dispatcher = true)
+	@Trace
 	public Future<BoxedUnit> write(Request request) {
 		NewRelic.getAgent().getTracedMethod().setMetricName("Custom","Finagle","Netty4ClientStreamTransport","writeRequest");
 		FinagleHeaders headers = new FinagleHeaders(request);
