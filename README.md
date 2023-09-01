@@ -19,9 +19,7 @@
 
 # New Relic Java Instrumentation for Finagle
 
-Provides instrumentation for the Java - Finagle Core, Finagle HttpClient and Finagle Hystrix .
-
-Finagle is a Java to HTTP client binder.
+Provides instrumentation for the Java - Finagle Core, Finagle Http and Finagle Thrift.
 
 ## Installation
 
