@@ -5,7 +5,7 @@ apply plugin: 'java'
 apply plugin: 'scala'
 
 dependencies {
-   implementation 'com.twitter:finagle-core_2.12:20.1.0'
+   implementation 'com.twitter:finagle-core_2.12:18.2.0'
 
    // New Relic Labs Java Agent dependencies
    implementation 'com.newrelic.agent.java:newrelic-agent:6.4.0'
@@ -20,6 +20,7 @@ jar {
     attributes 'Implementation-Vendor': 'New Relic Labs'
     attributes 'Implementation-Vendor-Id': 'com.newrelic.labs'
     attributes 'Implementation-Version': 1.0
+    attributes 'Agent-Class': 'com.newrelic.instrumentation.finagle.http.tracing.FinagleCorePreMain'
   }
 }
 

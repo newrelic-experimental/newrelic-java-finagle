@@ -13,6 +13,7 @@ class SerialClientDispatcher[Req, Rep](trans: Transport[Req, Rep], statsReceiver
 
     @Trace(dispatcher = true)
     protected def dispatch(req: Req, p: Promise[Rep]): Future[Unit] = {
+        
         NewRelic.getAgent.getTracedMethod.setMetricName("")
         Weaver.callOriginal()
     }

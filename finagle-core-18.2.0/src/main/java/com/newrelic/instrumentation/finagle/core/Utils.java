@@ -17,4 +17,13 @@ public class Utils {
 		}
 	}
 
+	@SuppressWarnings("unchecked")
+	public static <Res> void addEventListener(Object future, NewRelicHolder holder, Object request) {
+		if(future instanceof com.twitter.util.Future) {
+			
+			com.twitter.util.Future<Res> f = (com.twitter.util.Future<Res>)future;
+			NRFutureEventListener<Res> eventListener = new NRFutureEventListener<>(holder, request);
+			f.addEventListener(eventListener);
+		}
+	}
 }
